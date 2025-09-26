@@ -2,39 +2,56 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Definition of the design system. All colors, gradients, fonts, etc should be defined here. 
-All colors MUST be HSL.
-*/
+/* Resort luxury design system with mountain/nature inspiration */
 
 @layer base {
   :root {
     --background: 0 0% 100%;
-    --foreground: 222.2 84% 4.9%;
+    --foreground: 158 25% 15%;
 
-    --card: 0 0% 100%;
-    --card-foreground: 222.2 84% 4.9%;
+    --card: 0 0% 98%;
+    --card-foreground: 158 25% 15%;
 
     --popover: 0 0% 100%;
-    --popover-foreground: 222.2 84% 4.9%;
+    --popover-foreground: 158 25% 15%;
 
-    --primary: 222.2 47.4% 11.2%;
-    --primary-foreground: 210 40% 98%;
+    /* Mountain green theme */
+    --primary: 158 45% 35%;
+    --primary-foreground: 0 0% 98%;
+    --primary-light: 158 45% 45%;
+    --primary-dark: 158 45% 25%;
 
-    --secondary: 210 40% 96.1%;
-    --secondary-foreground: 222.2 47.4% 11.2%;
+    /* Elegant neutrals */
+    --secondary: 45 25% 85%;
+    --secondary-foreground: 158 25% 15%;
 
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
+    --muted: 45 15% 92%;
+    --muted-foreground: 158 15% 45%;
 
-    --accent: 210 40% 96.1%;
-    --accent-foreground: 222.2 47.4% 11.2%;
+    --accent: 45 45% 75%;
+    --accent-foreground: 158 25% 15%;
+
+    /* Luxury gold accents */
+    --gold: 45 85% 55%;
+    --gold-light: 45 85% 65%;
+    --gold-dark: 45 85% 45%;
 
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 214.3 31.8% 91.4%;
-    --input: 214.3 31.8% 91.4%;
-    --ring: 222.2 84% 4.9%;
+    --border: 158 15% 85%;
+    --input: 158 15% 90%;
+    --ring: 158 45% 35%;
+
+    /* Custom gradients */
+    --gradient-mountain: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.9), hsl(var(--primary-dark) / 0.8));
+    
+    /* Shadows */
+    --shadow-luxury: 0 10px 40px -10px hsl(var(--primary) / 0.3);
+    --shadow-card: 0 4px 20px -5px hsl(var(--primary) / 0.15);
+    --shadow-image: 0 8px 32px -8px hsl(var(--foreground) / 0.2);
 
     --radius: 0.5rem;
 
@@ -56,33 +73,48 @@ All colors MUST be HSL.
   }
 
   .dark {
-    --background: 222.2 84% 4.9%;
-    --foreground: 210 40% 98%;
+    --background: 158 25% 8%;
+    --foreground: 45 25% 90%;
 
-    --card: 222.2 84% 4.9%;
-    --card-foreground: 210 40% 98%;
+    --card: 158 25% 10%;
+    --card-foreground: 45 25% 90%;
 
-    --popover: 222.2 84% 4.9%;
-    --popover-foreground: 210 40% 98%;
+    --popover: 158 25% 8%;
+    --popover-foreground: 45 25% 90%;
 
-    --primary: 210 40% 98%;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary: 158 45% 55%;
+    --primary-foreground: 158 25% 8%;
+    --primary-light: 158 45% 65%;
+    --primary-dark: 158 45% 35%;
 
-    --secondary: 217.2 32.6% 17.5%;
-    --secondary-foreground: 210 40% 98%;
+    --secondary: 158 15% 20%;
+    --secondary-foreground: 45 25% 90%;
 
-    --muted: 217.2 32.6% 17.5%;
-    --muted-foreground: 215 20.2% 65.1%;
+    --muted: 158 15% 15%;
+    --muted-foreground: 158 15% 65%;
 
-    --accent: 217.2 32.6% 17.5%;
-    --accent-foreground: 210 40% 98%;
+    --accent: 158 25% 25%;
+    --accent-foreground: 45 25% 90%;
+
+    --gold: 45 85% 65%;
+    --gold-light: 45 85% 75%;
+    --gold-dark: 45 85% 55%;
 
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 210 40% 98%;
 
-    --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
-    --ring: 212.7 26.8% 83.9%;
+    --border: 158 15% 20%;
+    --input: 158 15% 20%;
+    --ring: 158 45% 55%;
+    
+    --gradient-mountain: linear-gradient(135deg, hsl(var(--primary)), hsl(var(--primary-light)));
+    --gradient-sunset: linear-gradient(135deg, hsl(var(--gold)), hsl(var(--gold-light)));
+    --gradient-hero: linear-gradient(135deg, hsl(var(--primary) / 0.9), hsl(var(--primary-dark) / 0.8));
+    
+    --shadow-luxury: 0 10px 40px -10px hsl(var(--primary) / 0.4);
+    --shadow-card: 0 4px 20px -5px hsl(var(--primary) / 0.25);
+    --shadow-image: 0 8px 32px -8px hsl(var(--foreground) / 0.3);
+
     --sidebar-background: 240 5.9% 10%;
     --sidebar-foreground: 240 4.8% 95.9%;
     --sidebar-primary: 224.3 76.3% 48%;
