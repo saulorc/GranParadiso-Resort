@@ -6,6 +6,7 @@ on:
     branches:
       - main  # ou master, se for seu branch principal
 
+
 jobs:
   build:
     runs-on: ubuntu-latest
