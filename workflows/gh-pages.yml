@@ -4,16 +4,17 @@ name: Deploy to GitHub Pages (classic)
 on:
   push:
     branches:
-      - main  # ou master, se for seu branch principal
-
+      - main   # altere se seu branch principal for "master"
 
 jobs:
   build:
     runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
 
-      - name: Setup Node
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
